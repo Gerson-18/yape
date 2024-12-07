@@ -1,0 +1,154 @@
+/* Ajuste general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo morado que ocupa toda la pantalla */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #661277; /* Color morado */
+    color: white;
+}
+
+/* Contenedor principal */
+.yape-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centrado verticalmente */
+    align-items: center;  /* Centrado horizontalmente */
+}
+
+/* Logo de Yape */
+.yape-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.yape-logo {
+    width: 100px;
+    position: relative;
+    top: -30px; /* Mueve la imagen hacia arriba */
+}
+
+/* Caja de información del pago */
+.payment-info {
+    background: url('yape2.png') no-repeat center center;
+    background-size: cover;
+    color: #333;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150%;
+    max-width: 490px;
+    height: 350px;
+    margin: -20px auto 20px; /* Agregar margen negativo en la parte superior */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-50px); /* Mueve el contenedor 50px a la izquierda */
+}
+
+/* Título dentro de la caja de información */
+.payment-info h2 {
+    font-size: 24px; /* Ajusta el tamaño a tu preferencia */
+    font-weight: bold;
+    color: #661277; /* Color morado */
+    margin: 0 0 90px 0; /* Espacio debajo del título */
+}
+
+/* Monto de la transferencia */
+.payment-info .amount {
+    font-size: 60px !important; /* Forzar el tamaño de la fuente */
+    color: #661277; /* Color morado */
+    position: relative;
+    top: -60px; /* Mueve el texto hacia arriba */
+    left: -7px; /* Mover hacia la derecha */
+}
+
+/* Moneda (S/) */
+.payment-info .currency {
+    font-size: 22px; /* Tamaño más pequeño */
+    color: #888888; /* Color plomo */
+    position: relative;
+    top: -19px; /* Mover hacia arriba */
+    left: 10px; /* Mover hacia la derecha */
+}
+
+/* Nombre del comercio */
+.payment-info .business-name {
+    margin-top: -20px; /* Mueve hacia arriba */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Fecha y hora */
+.payment-info .date-time {
+    margin-top: 7px; /* Mueve hacia arriba */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    gap: 20px; /* Agrega separación entre los botones */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: rgba(158, 4, 153, 0.45);
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    padding: 20px 30px; /* Reduce la altura cambiando el padding superior e inferior */
+    font-size: 0.9rem;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.buttons button:hover {
+    background-color: #ffffff;
+    color: white;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .payment-info {
+        height: 300px; /* Reduce aún más la altura para pantallas medianas */
+    }
+    .payment-info .amount {
+        font-size: 1.8rem;
+    }
+    .payment-info .business-name {
+        font-size: 1rem;
+    }
+    .payment-info .date-time {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-info {
+        height: 250px; /* Ajusta la altura para pantallas pequeñas */
+    }
+    .payment-info .amount {
+        font-size: 1.6rem; /* Texto más pequeño */
+    }
+}
